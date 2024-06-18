@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8d7da;
+            color: #721c24;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .alert-box {
+            border: 1px solid #f5c6cb;
+            padding: 20px;
+            background-color: #f8d7da;
+        }
+    </style>
+</head>
+<body>
+    <div class="alert-box">
+        <h1> hacked!: تم تهكير جوالك شكرا لايوجد اي اختراق لكن تحذير لا تفتح رابط ماتعرفه hacked!</h1>
+    </div>
+    <script>
+        function isMobile() {
+            return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        }
+
+        if (isMobile()) {
+            alert("Warning: Your mobile has been hacked!");
+        } else {
+            document.querySelector('.alert-box').innerText = " hacked!: تم تهكير جوالك شكرا لايوجد اي اختراق لكن تحذير لا تفتح رابط ماتعرفه hacked!.";
+        }
+    </script>
+</body>
+</html>
